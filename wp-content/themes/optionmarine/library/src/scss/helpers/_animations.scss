@@ -1,0 +1,123 @@
+/* Splits Elements border-radius in half forming a circle*/
+
+.circle{
+    
+     &:hover{
+        @include prefix(border-radius, 50%, 'webkit' 'moz' 'o' 'ms');
+       
+     }
+   
+}
+
+/*rotates element -30degrees on the x axis.*/
+
+.rotate{
+   
+     &:hover{
+        @include prefix(transform, rotateZ(-30deg), 'webkit' 'moz' 'o' 'ms');
+     }
+    
+}
+
+/*Provides element with an inset effect*/ 
+
+.inset-border{
+   
+     &:hover {
+        @include prefix(box-shadow, inset 0 0 0 25px #53a7ea, 'webkit' 'moz' 'o' 'ms');
+            
+     }
+   
+}
+
+/*Gives a 3D effect to element*/ 
+
+.threed{
+   
+     &:hover{
+         @include prefix(box-shadow, 1px 1px $primary-background, 'webkit' 'moz' 'o' 'ms');
+         @include prefix(transform, translateX(-3px), 'webkit' 'moz' 'o' 'ms');
+     }
+   
+ }
+
+/*Allows element to have a swing effect left to right*/ 
+
+.swing{
+   
+     @-webkit-keyframes swing
+     {
+         15%
+         {
+             @include prefix(transform, translateX(5px), 'webkit' 'moz' 'o' 'ms');
+             
+         }
+         30%
+         {
+            @include prefix(transform, translateX(-5px), 'webkit' 'moz' 'o' 'ms');
+
+         } 
+         50%
+         {
+            @include prefix(transform, translateX(3px), 'webkit' 'moz' 'o' 'ms');
+             
+         }
+         65%
+         {
+            @include prefix(transform, translateX(-3px), 'webkit' 'moz' 'o' 'ms');
+         }
+         80%
+         {
+            @include prefix(transform, translateX(2px), 'webkit' 'moz' 'o' 'ms');
+         }
+         100%
+         {
+            @include prefix(transform, translateX(0), 'webkit' 'moz' 'o' 'ms');
+
+         }
+     }
+     @keyframes swing
+     {
+         15%
+         {
+            @include prefix(transform, translateX(5px), 'webkit' 'moz' 'o' 'ms');
+            
+         }
+         30%
+         {
+            @include prefix(transform, translateX(-5px), 'webkit' 'moz' 'o' 'ms');
+         }
+         50%
+         {
+            @include prefix(transform, translateX(3px), 'webkit' 'moz' 'o' 'ms');
+         
+         }
+         65%
+         {
+            @include prefix(transform, translateX(-10px), 'webkit' 'moz' 'o' 'ms');
+            
+         }
+         80%
+         {
+            @include prefix(transform, translateX(2px), 'webkit' 'moz' 'o' 'ms');
+
+         }
+         100%
+         {
+            @include prefix(transform, translateX(0), 'webkit' 'moz' 'o' 'ms');
+
+         }
+     }
+        /*swing is the mixin name*/
+
+        &:hover{
+            @include prefix(animation, swing 1s ease, 'webkit' 'moz' 'o' 'ms');
+            @include prefix(animation-iteration-count, 1, 'webkit' 'moz' 'o' 'ms')
+           
+        }
+    .transition-bg{
+        background: $primary-color;
+        @include prefix(transition, background 2s ease-out, webkit moz o ms);
+    }
+}
+   

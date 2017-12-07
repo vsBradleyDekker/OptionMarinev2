@@ -1,0 +1,192 @@
+.footer {
+    text-align: center;
+    background: $tertiary-color;
+
+    @include breakpoint(medium) {
+        text-align: left;
+    }
+
+    .footer__social {
+
+        .footer__social-logo {
+            width: 50%;
+        }
+
+        ul {
+            margin-top: 20px;
+
+            li {
+                display: inline !important;
+                padding-left: 1em;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                .fa {
+                    font-size: 29px;
+                }
+            }
+        }
+
+        .footer__social-info {
+           
+            span {
+                display: block;
+                color: $white;
+                font-size: 15px;
+                @include  vertical-align($position: relative);
+
+                a {
+                    color: $white;
+
+                    a:hover {
+                        color: $white;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .fa {
+                font-size: 29px;
+                color: #027c93;
+            }
+        }
+
+        .footer__social-newsletter {
+           
+            .input-group-field{
+                @include padding-all( 1em, 0em, 1em ,1em);
+                border: 3px solid #FFF;
+                background: transparent;
+                color: $white;
+
+                &:focus{
+                    outline: none;
+                }
+
+                @include placeholder{
+                    color: $white;
+                }
+
+                @include breakpoint(medium){
+                    
+                    @include padding-all( 15px, 0px, 15px ,15px);
+                   
+                }
+            }
+
+            .input-group-button{
+
+                input{
+                    @include padding-all( 0px, 35px, 0px ,35px);
+                    display: block;
+                    border: none;
+                    background: $main-color;
+                    color: $white;
+                    cursor: pointer;
+                  
+                  
+
+                    &:focus{
+                        outline: none;
+                    }
+
+                    @include breakpoint(medium){
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .footer__navigation {
+
+        ul {
+
+            span {
+                font-size: 18px;
+            }
+            
+            li {
+
+                a {
+                    font-size: 14px;
+                    
+                    &:hover {
+                        color: $white;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+    .footer__copyright {
+        color: $white;
+        font-size: 13px;
+
+        @include breakpoint(medium) {
+            text-align: left;
+        }
+    }
+}
+
+.footer-secondary {
+    text-align: center;
+
+    @include breakpoint(medium) {
+        text-align: left;
+    }
+    
+    .footer-secondary__nav li {
+
+        display: inline;
+        list-style-type: none;
+        padding-left: 8px;
+        line-height: 4;
+
+        @include breakpoint(medium) {
+            padding-right: 0.5em;
+        }
+
+        a {
+            color: #656565;
+            font-size: 18px;
+        }
+    }
+
+    .footer-secondary__social-list {
+        text-align: center;
+
+        @include breakpoint(medium) {
+            text-align: left;
+        }
+
+        .fa {
+            padding-right: 0.5em;
+            font-size: 30px;
+            color: #0899b8;
+        
+            @include breakpoint(medium) {
+                @include padding-all( 16px, 0px, 0px ,16px);
+                padding-top: 16px;
+                padding-left: 16px;
+                padding-right: 0;
+            }
+        }
+
+        ul {
+            float: right;
+
+            li {
+                display: inline;
+            }
+        }
+    }
+
+    .footer-secondary__copyright {
+        text-align: left;
+        font-size: 13px;
+        color: #656565;
+        
+    }
+}

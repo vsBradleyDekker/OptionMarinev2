@@ -1,0 +1,40 @@
+$fa-font-path: "~font-awesome-sass/assets/fonts/font-awesome/";
+$body-font-family: 'Ubuntu',sans-serif !default;
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+$break-small: 575px;
+$break-medium: 768px;
+$break-large: 1200px;
+
+/*Website Colors*/
+
+$primary-color: #027c93;
+$secondary-color: #FFF;
+$tertiary-color: #3a3a3a;
+$sketch-grey: #f2f2f2;
+$opacity-primary-color: rgba(23,136,151,0.9);
+$backline-grey: #e7e7e7;
+$main-color: #027d8b;
+
+$primary-font-color: #555555;
+$white: #ffffff;
+$black: #000;
+$gray: #d6d6d6;
+
+$primary-background: #1d96b9;
+$secondary-background : #027c93;
+
+$primary-text: $black;
+$primary-heading: $black;
+
+$secondary-heading: $primary-color;
+$primary-link-text: $black;
+$secondary-link-text: $primary-color;
+
+$drop-down-menu: $black;
+$border-primary: #555555;
+$border-secondary: #fff;
+$border-tertiary: #e7e7e7;
+$body-background: $white;
+$body-background-secondary: #e1e1e1;
+$feature-background: #f5f5f5;

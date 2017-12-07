@@ -1,0 +1,53 @@
+h1 {
+    color: $white;
+    font-weight: 600;
+}
+
+h2 {
+    color: $primary-font-color;
+    font-weight: 600;
+}
+
+h3 {
+    color: $main-color;
+    font-size: 22px;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+p {
+    color: $primary-font-color;
+    font-size: 16px;
+    margin-bottom: 30px;
+    
+}
+
+ul {
+    margin-left: 0;
+    
+    li {
+        list-style-type: none;
+
+        a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                @include opacity(0.8);
+                color: $white;
+            }
+
+            &:visited {
+                @include opacity(0.8);
+                color: $white;
+            }
+
+            &:focus {
+                @include opacity(0.8);
+                color: $white;
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,82 @@
+.product-information {
+    background: #f2f2f2;
+    
+    .row{
+        text-align: center;
+
+        @include breakpoint(medium){
+            text-align: left;
+        }
+
+        .product-information__trail {
+            color: #828282;
+        }
+    }
+
+    .product-information__title {
+        margin-bottom: 1em;
+        font-size: 22px;
+    }
+
+    .product-infomation__description{
+        text-align: left;
+    }
+
+    .product-information__type__title-description{
+        text-align: left;
+    }
+
+    .product-information__downloads {
+        
+        .product-information__downloads-title{
+            border-bottom: none;
+
+            @include breakpoint(medium){
+                border-bottom: 1px solid #d9d9d9;
+            }
+        }
+
+        .product-information__downloads-link{
+
+            border-right: 1px solid #d9d9d9;
+
+            @include breakpoint(medium){
+                border-right: none;
+            }
+
+            a{
+                color: #555555;
+            }
+        }
+    }
+
+    .product-information__gallery__listing{
+        img{
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .product-information__technical-spec {
+        background: $main-color;
+
+        .product-information__technical-spec__title {
+            color: $white;
+        }
+
+        .product-information__technical-spec__part{
+            border-left: 1px solid $white;
+
+            @include breakpoint(medium){
+                border-left: none;
+            }
+        }
+
+        p {
+           
+            border-top: 1px solid $white;
+            margin-bottom: 0;
+            color: $white;
+        }
+    }
+}

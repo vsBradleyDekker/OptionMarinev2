@@ -1,0 +1,109 @@
+/*--Header Navigation Menu--*/
+
+.header-mast__navigation {
+    z-index: 1;
+
+    nav {
+        width: 100%;
+        background: transparent;
+        
+        .toggle {
+            @include padding-all( 5px, 17px, 5px ,17px); 
+            display: block;
+            float: right;
+            position: relative;
+            right: 20px;
+            bottom: 55px;
+            box-sizing: border-box;
+            text-align: right;
+            background: rgba(23, 136, 151, 1);
+            font-size: 30px;
+            color: $white;
+            border-radius: 10px;
+            transition: all 3s ease-out;
+            cursor: pointer;
+
+            @include breakpoint(medium) {
+                display: none;
+            }
+        }
+
+        .active {
+            display: block;
+        }
+
+        ul {
+            @include padding-all( 0px, 0px, 0px ,0px); 
+            width: 100%;
+            display: none;
+            float: right;
+            margin-top: 15px;
+            background: rgba(23, 136, 151, 1);
+
+            @include breakpoint(medium) {
+                width: 80%;
+                display: block;
+                background: transparent;
+            }
+
+            li {
+                @include padding-all( 1em, 2em, 1em ,2em); 
+                display: block;
+                border-bottom: 1px solid $white;                
+                list-style-type: none;
+                text-align: left;
+               
+                @include breakpoint(small){
+                    padding-left: 2em;
+                }
+               
+                @include breakpoint(medium) {
+                    display: inline-block;
+                    border-bottom: none;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    padding-left: 0;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    @include breakpoint(medium) {
+                        color: $primary-font-color;
+                    }
+                    
+                    .fa{
+                        padding: 0.5em;
+                        @include padding-all( 0.5em, 0.5em, 0.5em ,0.5em); 
+                    }
+                }
+            }  
+        }
+    }
+}
+
+
+/*footer Navigation Menu*/
+
+.footer__navigation {
+    
+    ul {
+        span {
+            color: $white;
+            font-weight: 600;
+            display: block;
+            font-size: 20px;
+        }
+
+        li {
+            padding-top: .5em;
+        }
+    }
+}

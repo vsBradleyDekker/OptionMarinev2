@@ -1,0 +1,130 @@
+.searchbar {
+    text-align: center;
+    background: $main-color;
+    color: $white;
+    position: relative;
+
+    @include breakpoint(medium){
+        text-align: left;
+    }
+    
+    input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        font-size: 23px;
+        outline-color: none;
+        color: $white;
+        
+
+        @include placeholder {
+            color: #b4d8dc;
+            font-size: 23px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .searchbar__container {
+        position: relative;
+    }
+
+    .searchbar__dropdown{
+
+        span{
+            float: right;
+            font-size: 20px;
+            color: $white;
+            display: block;
+           
+            .fa {
+                position: relative;
+                bottom: 5px;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            
+        }
+
+        &:hover{
+            
+            + .mega-menu{
+                display: block;
+            }
+        }
+    } 
+
+    .mega-menu{
+        @include padding-all( 1em, 1em, 1em ,1em); 
+        display: none;
+        background: #0a9ec2;
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        z-index: 1;
+
+        h4{
+            color: $white;
+        }  
+
+        &:hover{
+            display: block;
+        }
+    }  
+
+}
+
+.searchbar-secondary {
+    background: #e7e7e7;
+
+    .searchbar-secondary__title {
+        color: $main-color;
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    .searchbar-secondary__search {
+
+        input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            font-size: 23px;
+            font-weight: 600;
+            outline-color: none;
+            color: $main-color;
+            
+
+            @include placeholder {
+                color: $main-color;
+                font-size: 23px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .searchbar-secondary__bigmenu {
+
+        span {
+            float: right;
+            font-size: 20px;
+            font-weight: 600;
+            color: $main-color;
+            
+            .fa {
+                @include breakpoint(medium) {
+                    position: relative;
+                    bottom: 5px;
+                    left: 5px;
+                }
+            }
+        }
+    }
+}

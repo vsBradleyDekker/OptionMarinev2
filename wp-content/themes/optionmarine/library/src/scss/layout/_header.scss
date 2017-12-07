@@ -1,0 +1,135 @@
+.header-mast {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include padding-all( 1em, 0em, 1em ,0em); 
+
+    @include breakpoint(medium) {
+        
+        @include padding-all( 0em, 0em, 0em ,0em); 
+    }
+
+    .header-mast__logo-holder {
+
+        .header-mast__logo-holder__logo {
+            width: 55%;
+            padding-bottom: 1em;
+           
+
+            @include breakpoint(medium) {
+                width: 100%;
+            }
+        }
+    }
+
+    .nav {
+
+        .menu-item-has-children {
+            position: relative;
+            padding-right: 0;
+         
+            .sub-menu {
+                display: none;
+                width: auto;
+                position: absolute;
+                margin: 0;
+                background-color: $main-color;
+
+                li{
+                    @include padding-all( 5px, 0px, 5px ,5px); 
+
+                    a {
+                        white-space: nowrap;
+                        color: $white;
+                    }
+                }
+            }
+            
+            &:hover{
+    
+                > .sub-menu{
+                    display: block;
+                }
+            }
+    
+        }
+        > .menu-item-has-children{
+            
+            > .sub-menu{
+                
+                top: 100%;
+    
+                >.menu-item-has-children {
+                    
+                    &:hover {
+                        .sub-menu {
+                            left: 100%;
+                            top: 0;
+                        }
+                    }
+                    
+                }
+    
+            }
+        }
+    }
+}
+
+.header-secondary {
+
+    .header-secondary__logo {
+        width: 55%;
+        padding-bottom: 1em;
+    
+    }
+
+    .nav {
+
+        .menu-item-has-children {
+            position: relative;
+
+            .sub-menu {
+                display: none;
+                position: absolute;
+                width: auto;
+                margin: 0;
+                background-color: $main-color;
+
+                li{
+                    @include padding-all( 5px, 0px, 5px ,5px); 
+
+                    a {
+                        white-space: nowrap;
+                        color: $white;
+                    }
+                }
+            }
+            
+            &:hover{
+    
+                > .sub-menu{
+                    display: block;
+                }
+            }
+    
+        }
+        > .menu-item-has-children{
+            
+            > .sub-menu{
+                
+                top: 100%;
+    
+                >.menu-item-has-children {
+                    
+                    &:hover {
+                        .sub-menu {
+                            left: 100%;
+                            top: 0;
+                        }
+                    }
+                    
+                }
+    
+            }
+        }
+    }
+}
