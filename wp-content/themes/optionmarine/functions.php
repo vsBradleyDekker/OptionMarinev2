@@ -25,7 +25,7 @@ function bones_ahoy() {
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  //require_once( 'library/custom-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -240,5 +240,136 @@ function bones_fonts() {
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+
+//add extra fields to category edit form hook
+add_action( 'product-categories_edit_form_fields', 'category_edit_form_fields');
+add_action( 'product-categories_add_form_fields', 'category_add_form_fields');
+
+
+//add extra fields to category edit form callback function
+function category_add_form_fields( $tag ) {    //check for existing featured ID
+    $t_id = $tag->term_id;
+    $cat_meta = get_option( "category_$t_id");
+
+
+?>
+<div class="form-field term-description-wrap">
+	<label for="Cat_meta_uses">Uses/Application</label>
+	<textarea name="Cat_meta[uses]" id="Cat_meta_uses" rows="5" cols="40"><?php echo $cat_meta['uses'] ? htmlentities($cat_meta['uses']) : ''; ?></textarea>
+	<p><?php _e('Uses & Application'); ?></p>
+</div>
+
+<?php
+}
+
+
+//add extra fields to category edit form callback function
+function category_edit_form_fields( $tag ) {    //check for existing featured ID
+    $t_id = $tag->term_id;
+    $cat_meta = get_option( "category-extra-field-uses-$t_id");
+    $cat_order = get_term_meta( $t_id, "cat-order" );
+	
+
+?>
+<tr class="form-field term-description-wrap">
+			<th scope="row"><label for="Cat_meta_uses">Uses/Application</label></th>
+			<td><textarea name="Cat_meta[uses]" id="Cat_meta_uses" rows="5" cols="50" class="large-text"><?=htmlentities( $cat_meta )?></textarea>
+			<p class="description"><?php _e('Uses & Application'); ?></p></td>
+		</tr>
+		<tr class="form-field term-description-wrap">
+			<th scope="row"><label for="cat-order">Category Order</label></th>
+			<td><input name="cat-order" id="cat-order" type="number" value="<?=get_term_meta( $t_id, "cat-order" )[0]?>" size="40" />
+			<p class="description"><?php _e('Category Order'); ?></p></td>
+		</tr>
+<?php
+}
+
+add_action('edit_term','category_save_extra_fields');
+add_action('create_term','category_save_extra_fields');
+
+function category_save_extra_fields($term_id){
+
+
+	if(isset($_POST['Cat_meta']['uses']))
+        	update_option('category-extra-field-uses-' . $term_id, $_POST['Cat_meta']['uses'], NULL);
+
+
+	if (isset($_POST['cat-order'])) 
+		update_term_meta( $term_id, 'cat-order', $_POST['cat-order']);
+
+}
+
+
+add_filter('get_terms', 'custom_term_sort', 10, 3);
+
+
+function custom_term_sort($terms, $taxonomies, $args)
+{		
+	// Controls behavior when get_terms is called at unusual times resulting in a terms array without objects
+	$empty = false;
+ 
+	// Create collector arrays
+	$ordered_terms = array();
+	$unordered_terms = array();
+ 
+	// Add taxonomy order to terms
+	foreach($terms as $term)
+	{
+
+		// Only set tax_order if value is an object
+		if(is_object($term))
+		{
+			if($taxonomy_sort = get_term_meta($term->term_id, 'cat-order', true))
+			{
+				$term->cat_order = (int) $taxonomy_sort;
+				$ordered_terms[] = $term;
+			}
+			else
+			{
+				$term->cat_order = (int) 0;
+				$unordered_terms[] = $term;
+			}
+		}
+		else
+			$empty = true;
+	}
+
+
+	// Only sort by tax_order if there are items to sort, otherwise return the original array
+	if(!$empty && count($ordered_terms) > 0){
+		quickSort($ordered_terms);
+	}else{
+		return $terms;
+	}
+ 
+	// Combine the newly ordered items with the unordered items and return
+	return array_merge($ordered_terms, $unordered_terms);	
+}
+ 
+function quickSort(&$input)
+{
+	$tmp = array();
+
+	foreach( $input AS $a )
+	{
+		if( isset( $tmp[ $a->cat_order ] ) )
+		{
+			$tmp[] = $a;
+		}
+		else
+		{
+			$tmp[ $a->cat_order ] = $a;
+		}
+
+	}
+
+	ksort( $tmp );
+	$input = array_values ( $tmp );	
+
+}
+
+
+
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

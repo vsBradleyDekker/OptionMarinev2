@@ -22,11 +22,25 @@
 /** The name of the database for WordPress */
 define('DB_NAME', 'optionmarine_test');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+if( $_SERVER['HTTP_HOST'] == 'optionmarine.localhost' )
+{
+	/** MySQL database username */
+	define('DB_USER', 'optionmarine_test');
 
-/** MySQL database password */
-define('DB_PASSWORD', '');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'optionmarine_test');
+
+}
+else
+{
+	/** MySQL database username */
+	define('DB_USER', 'root');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', '');
+
+}
+
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

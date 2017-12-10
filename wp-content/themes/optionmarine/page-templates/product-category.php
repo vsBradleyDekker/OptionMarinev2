@@ -1,26 +1,29 @@
-<?php include("../header-secondary.php"); ?>
-<?php include("../page-components/searchbar-secondary.php"); ?>
+<?php include( get_template_directory() . "/header-secondary.php"); ?>
+<?php include( get_template_directory() . "/page-components/searchbar-secondary.php"); ?>
+<?php
+
+$t = get_queried_object();
+
+$_uses = get_option( "category-extra-field-uses-" . $t->term_id );
+
+?>
 <section class="product_category">
     <div class="row">
         <div class="columns small-12 medium-12 pt-medium pb-medium">
-            <span class="product_category-trail">Home > Products > Zippers</span>
+            <span class="product_category-trail"><a href="/">Home</a> > <a href="/products">Products</a> > <?=$t->name?></span>
         </div>
     </div>
     <div class="row pt-medium pb-medium">
         <div class="columns small-12 medium-6">
             <div class="white-background pad-all-xs">
                 <h4 class="product-category__title">Zippers</h4>
-                <p class="product-category__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                    it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                    PageMaker including versions of Lorem Ipsum.</p>
+                <p class="product-category__description"><?=htmlentities( $t->description )?></p>
             </div>
         </div>
         <div class="columns small-12 medium-6">
             <div class="white-background pad-all-xs">
                 <h3 class="product-category__uses">Application/Uses</h3>
+		<p class="product-category__description"><?=htmlentities( $_uses )?></p>
             </div>
         </div>
     </div>
@@ -31,14 +34,29 @@
                     <h3 class="product-category__list-title">Product Name</h3>
                 </div>
             </div>
+<?php
+$q = new WP_Query( array( 'post_type' => 'products', get_query_var( 'taxonomy' ) => get_query_var( 'term' )  ) ); 
+
+$_results = $q->get_posts();
+
+foreach( $_results  AS $_result ) :
+
+?>
+
+
             <div class="row collapse">
                 <div class="columns small-12 medium-10">
-                    <span class="product-list__name">Water-Resistant RainDyfer™ #10 Coil Zipper</span>
+                    <span class="product-list__name"><?=htmlentities( $_result->post_title )?></span>
                 </div>
                 <div class="columns small-12 medium-2 text-center">
-                    <a href="../pages/product-information.php">View</a>
+                    <a href="<?=get_permalink( $_result )?>">View</a>
                 </div>
             </div>
+<?php
+
+endforeach;
+?>
+<!--
             <div class="row collapse">
                 <div class="columns small-12 medium-10">
                     <span class="product-list__name">Gauge Zippers</span>
@@ -78,8 +96,8 @@
                 <div class="columns small-12 border-bottom medium-2 text-center">
                     <a href="#">View</a>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>
-<?php include("../footer-secondary.php"); ?>
+<?php include( get_template_directory() . "/footer-secondary.php"); ?>
