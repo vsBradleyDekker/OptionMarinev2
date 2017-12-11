@@ -1427,6 +1427,7 @@ function wp_print_footer_scripts() {
  * @since 2.8.0
  */
 function wp_enqueue_scripts() {
+
 	/**
 	 * Fires when scripts and styles are enqueued.
 	 *

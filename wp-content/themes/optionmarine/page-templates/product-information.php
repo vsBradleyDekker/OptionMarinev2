@@ -1,11 +1,13 @@
-<?php include( get_template_directory() . "/header-secondary.php"); ?>
-<?php include( get_template_directory() . "/page-components/searchbar-secondary.php"); ?>
+<?php get_header( 'secondary' ) ?>
+<?php //include( get_template_directory() . "/page-components/searchbar-secondary.php"); ?>
 <?php
 $t = get_the_terms( 19, 'product-categories' );
 
 $p = get_queried_object();
 
 $o = get_field_objects();
+
+if (have_posts()) : while (have_posts()) : the_post();
 
 ?>
 <section class="product-information">
@@ -24,8 +26,8 @@ $o = get_field_objects();
         </div>
         <div class="columns small-12 medium-8 product-information__type pt-small pb-medium">
             <div class="columns small-12 white-background">
-                <h3 class="product-information__type__title pt-small">Water Proof Zippers</h3>
-                <p class="product-information__type__title-description"><?=$p->post_content?></p>
+                <h3 class="product-information__type__title pt-small"><? the_title();?></h3>
+                <? the_content();?>
             </div>
             <div class="columns small-12 pt-medium pb-medium mb-small product-information__downloads white-background">
                 <div class="row collapse">
@@ -58,10 +60,12 @@ endforeach;
                 <div class="row">
 <?php
 foreach( $o['gallery']['value'] AS $_image ):
+
+	echo slb_activate( '<div class="product-information__gallery__listing columns small-12 medium-3 text-center pb-small">
+                        <a class="gallery_image" href="' . $_image['url'] . '"><img class="listing__image" src="' . $_image['sizes']['thumbnail']. '" alt="outdoor-deck"></a>
+                    </div>' );
 ?>
-                    <div class="product-information__gallery__listing columns small-12 medium-3 text-center pb-small">
-                        <img class="listing__image" data-fullsize="<?=$_image['url']?>" src="<?=$_image['sizes']['thumbnail']?>" alt="outdoor-deck">
-                    </div>
+                    
 <?php
 endforeach;
 ?>
@@ -101,4 +105,9 @@ endforeach;
         </div>
     </div>
 </section>
-<?php include( get_template_directory() . "/footer-secondary.php"); ?>
+<?php
+
+endwhile;
+endif;
+?>
+<?php get_footer( 'secondary' ); ?>

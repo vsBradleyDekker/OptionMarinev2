@@ -1,5 +1,5 @@
-<?php include( get_template_directory() . "/header-secondary.php"); ?>
-<?php include( get_template_directory() . "/page-components/searchbar-secondary.php"); ?>
+<?php get_header( 'secondary' ) ?>
+<?php //include( get_template_directory() . "/page-components/searchbar-secondary.php"); ?>
 <?php
 
 $t = get_queried_object();
@@ -56,48 +56,9 @@ foreach( $_results  AS $_result ) :
 
 endforeach;
 ?>
-<!--
-            <div class="row collapse">
-                <div class="columns small-12 medium-10">
-                    <span class="product-list__name">Gauge Zippers</span>
-                </div>
-                <div class="columns small-12 medium-2 text-center">
-                    <a href="#">View</a>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="columns small-12 medium-10">
-                    <span class="product-list__name">Matte Style Zippers</span>
-                </div>
-                <div class="columns small-12 medium-2 text-center">
-                    <a href="#">View</a>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="columns small-12 medium-10">
-                    <span class="product-list__name">Shiny Style Zippers</span>
-                </div>
-                <div class="columns small-12 medium-2 text-center">
-                    <a href="#">View</a>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="columns small-12 medium-10">
-                    <span class="product-list__name">Reverse Bail Zippers</span>
-                </div>
-                <div class="columns small-12 medium-2 text-center">
-                    <a href="#">View</a>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="columns small-12 border-bottom medium-10">
-                    <span class="product-list__name">Standard Bail Zippers</span>
-                </div>
-                <div class="columns small-12 border-bottom medium-2 text-center">
-                    <a href="#">View</a>
-                </div>
-            </div>-->
+
         </div>
     </div>
 </section>
-<?php include( get_template_directory() . "/footer-secondary.php"); ?>
+<?php //include( get_template_directory() . "/footer-secondary.php"); ?>
+<?php get_footer( 'secondary' ); ?>
