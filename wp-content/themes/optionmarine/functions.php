@@ -370,6 +370,62 @@ function quickSort(&$input)
 }
 
 
+if( $_POST['action'] == '__CONTACT__' )
+{
+
+	$_g_query = http_build_query( array( 'secret'=>'6LfzojwUAAAAAEoIokEUJNp3JlU_yAoRzWDAZlEy', 'response'=>$_POST['g-recaptcha-response'] )  );	
+
+	$ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
+	curl_setopt($ch, CURLOPT_POSTFIELDS,  $_g_query );
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+
+	$result = curl_exec($ch);
+
+	$a_response = json_decode( $result, true );
+
+	if( !$a_response['success'] )
+	{
+		die('0');
+	}	
+
+	$_msg = "
+        <style>
+          td, p { font-family: arial; color: #333 }
+        </style>
+	<table cellpadding=\"2\" cellspacing=\"0\">
+          <tr>
+            <td>Name</td>
+            <td style=\"color:#999\"> {$_POST[fullname]} </td>
+          </tr>";
+
+	if( $_POST['product'] != '' ):
+
+		$_msg .= "
+	   <tr>
+            <td>Product Enquiry</td>
+            <td style=\"color:#999\"> {$_POST[product]} </td>
+          </tr>";
+
+	endif;
+
+	$_msg .= "
+          <tr>
+            <td>Phone</td>
+            <td style=\"color:#999\"> {$_POST[phone]} </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td style=\"color:#999\"> {$_POST[email]} </td>
+          </tr> 
+         </table>
+         <p>" . nl2br(htmlentities($_POST[message])) . "</p> ";
+
+	echo wp_mail( 'admin@optionmarine.com.au', 'New contact from optionmarine.com.au', $_msg, array( 'From: website@optionmarine.com.au', 'Reply-to: ' . $_POST[email], 'Content-type: text/html' ) );
+
+	exit;
+	
+}
 
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

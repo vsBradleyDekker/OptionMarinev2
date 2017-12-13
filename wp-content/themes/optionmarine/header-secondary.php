@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Option Marine</title>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css">
+    <!--<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css">-->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css?ver=<?php echo rand();?>">
     <?php wp_head();?>
    
@@ -27,6 +27,20 @@
                         <div class="toggle menu">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </div>
+                       
+
+			<?php
+wp_nav_menu( array( 
+    'theme_location' => 'main-nav', 
+    'container_class' => 'custom-menu-class',
+    'menu_class'=>'nav top-nav cf' ) ); 
+?>
+                        <script>
+				
+				jQuery('#menu-item-67 a').addClass('button-head');
+
+                        </script>  
+			<?/*
                         <ul id="menu-the-main-menu" class="nav top-nav cf">
                             <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-5">
                                 <a href="../pages/products.php">Products</a>
@@ -65,7 +79,7 @@
                             <li id="menu-item-21" class="menu-item menu-item-type-taxonomy menu-item-object-category no-pad menu-item-21">
                                 <a class="button-head hide-for-small-only" href="../pages/contact.php">Contact Us</a>
                             </li>
-                        </ul>
+                        </ul>*/?>
                     </nav>
                 </div>
             </div>
