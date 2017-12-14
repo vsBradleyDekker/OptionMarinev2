@@ -21,7 +21,7 @@
       
         
         @include breakpoint(medium) {
-            @include padding-all( 2em, 5em, 2em ,5em);
+            @include padding-all( 0.5em, 5em, 2em ,5em);
            
         }
 
@@ -95,6 +95,12 @@
 
 .contact-form {
 
+    #myForm {
+
+	height: 3em
+
+    }
+
     .contact-form__title {
         color: #565656;
         font-size: 22px;
@@ -108,7 +114,7 @@
         }
 
         input {
-            @include padding-all( 2em, 2em, 2em ,1em);
+            @include padding-all( 0em, 2em, 0em ,1em);
             border-color: #7d7d7d;
             
 
@@ -120,7 +126,7 @@
         }
 
         textarea {
-            @include padding-all( 2em, 0em, 0em ,1em);
+            @include padding-all( 0em, 0em, 0em ,1em);
             resize: none;
             border-color: #7d7d7d;
            

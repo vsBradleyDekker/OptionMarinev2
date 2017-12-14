@@ -7,21 +7,30 @@ $p = get_queried_object();
 
 $o = get_field_objects();
 
+
 if (have_posts()) : while (have_posts()) : the_post();
 
 ?>
 <section class="product-information">
     <div class="row">
         <div class="columns small-12 medium-12 pt-small">
-            <span class="product-information__trail"><a href="/">Home</a> > <a href="/products">Products</a> > <a href="<?=get_term_link( $t[0], 'product-categories' )?>"><?=htmlentities($t[0]->name)?></a> > Water Proof Zippers </span>
+            <span class="product-information__trail"><a href="/">Home</a> > <a href="/products">Products</a> > <a href="<?=get_term_link( $t[0], 'product-categories' )?>"><?=htmlentities($t[0]->name)?></a> > <?=$p->post_title?> </span>
         </div>
     </div>
     <div class="row pb-small">
         <div class="columns small-12 medium-4  pt-small pb-medium">
             <div class="columns small-12 white-background">
-                <h2 class="product-information__title pt-small">Zippers</h2>
+                <h2 class="product-information__title pt-small"><?=$t[0]->name?></h2>
                 <p class="product-infomation__description"><?=nl2br(htmlentities($t[0]->description))?></p>
                 <button class="button">Enquire</button>
+                <script>
+			
+			window.jQuery('button.button').click( function(){
+
+				window.location = '<?=addslashes(get_permalink(46))?>?product=<?=addslashes(urlencode($p->post_title))?>';
+			});
+		
+                </script> 
             </div>
         </div>
         <div class="columns small-12 medium-8 product-information__type pt-small pb-medium">

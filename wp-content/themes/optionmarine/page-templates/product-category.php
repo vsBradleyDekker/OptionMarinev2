@@ -16,7 +16,7 @@ $_uses = get_option( "category-extra-field-uses-" . $t->term_id );
     <div class="row pt-medium pb-medium">
         <div class="columns small-12 medium-6">
             <div class="white-background pad-all-xs">
-                <h4 class="product-category__title">Zippers</h4>
+                <h4 class="product-category__title"><?=$t->name?></h4>
                 <p class="product-category__description"><?=htmlentities( $t->description )?></p>
             </div>
         </div>
