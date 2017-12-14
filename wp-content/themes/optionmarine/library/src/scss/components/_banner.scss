@@ -1,98 +1,130 @@
-.banner-wrapper {
-    @include center-block;
-    position: relative;
-    height: 80%;
+#content{
+    background-image:url('../img/yacht3.jpg')!important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 320px;
+   
     
-    @include breakpoint(medium) {
-        width: 86%;
-        height: 68%;
-    }
-
-    @include breakpoint(large) {
-        margin-top: 10em;
-        height: 55%;
-        width: 35%;
-        @include padding-all( 14em, 14em, 14em ,14em);
-    }
-    @media screen and #{breakpoint(large)} {
-        width: 80%;
-    }
-    @media screen and #{breakpoint(xlarge)} {
-        width: 55%;
-    }
-    .banner__background {
-        position: absolute;
-        background: rgba(23, 136, 151, 0.9);
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 100;
-        opacity: 0.8;
-    }
-
-    .banner__content {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 99999;
-
         @include breakpoint(medium) {
-            margin: 30px;
-            border: 3px solid white;
+            height: 640px;
+        }
+      
+          @include breakpoint(large) {
+            height: 1024px;
         }
 
-        .banner__content-title {
-            padding-top: 1em;
-            margin-bottom: 1em;
+    .content-wrap{
+    
+      @include breakpoint(medium) {
+        height: 640px;
+        overflow: hidden;
+    }
+  
+      @include breakpoint(large) {
+        height: 1024px;
+        
+    }
+
+        .banner-wrapper {
+            @include center-block;
+            position: relative;
+            height: 80%;
             
             @include breakpoint(medium) {
-                margin-bottom: 0.5em;
-                padding-top: 0.5em;
-                font-size: 56px;
-
+                width: 86%;
+                height: 68%;
             }
 
             @include breakpoint(large) {
-                padding-top: 1em;
-                margin-bottom: 1em;
-            }
-        }
-
-        .banner__content-subtitle {
-            color: $white;
-            margin-bottom: 2em;
-
-            @include breakpoint(medium) {
-                margin-bottom: 1em;
-                font-size: 28px;
-            }
-        }
-
-        .banner__content-button {
-            @include center-block;
-            width: 100%;
-            background: $white;
-            @include padding-all( 16px, 0px, 16px ,0px);
-            padding-top: 16px;
-            padding-bottom: 16px;
-           
-
-            @include breakpoint(medium) {
-                display: inline-block;
-                width: 50%;
-                font-size: 20px;
+                height: 55%;
+                width: 35%;
+                margin-top: 10em;
+                @include padding-all( 14em, 14em, 14em ,14em);
             }
 
-            @include breakpoint(medium) {
-                display: inline-block;
-                width: 50%;
+            @media screen and #{breakpoint(large)} {
+                width: 80%;
             }
-            
-            a {
-                color: rgba(23, 136, 151, 0.9);
+
+            @media screen and #{breakpoint(xlarge)} {
+                width: 55%;
+            }
+
+            .banner__background {
+                position: absolute;
+                background: rgba(23, 136, 151, 0.9);
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 100;
+                opacity: 0.8;
+            }
+
+            .banner__content {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 99999;
+
+                @include breakpoint(medium) {
+                    margin: 30px;
+                    border: 3px solid white;
+                }
+
+                .banner__content-title {
+                    padding-top: 1em;
+                    margin-bottom: 1em;
+                    
+                    @include breakpoint(medium) {
+                        margin-bottom: 0.5em;
+                        padding-top: 0.5em;
+                        font-size: 56px;
+
+                    }
+
+                    @include breakpoint(large) {
+                        padding-top: 1em;
+                        margin-bottom: 1em;
+                    }
+                }
+
+                .banner__content-subtitle {
+                    color: $white;
+                    margin-bottom: 2em;
+
+                    @include breakpoint(medium) {
+                        margin-bottom: 1em;
+                        font-size: 28px;
+                    }
+                }
+
+                .banner__content-button {
+                    @include center-block;
+                    width: 100%;
+                    background: $white;
+                    @include padding-all( 16px, 0px, 16px ,0px);
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                
+
+                    @include breakpoint(medium) {
+                        display: inline-block;
+                        width: 50%;
+                        font-size: 20px;
+                    }
+
+                    @include breakpoint(medium) {
+                        display: inline-block;
+                        width: 50%;
+                    }
+                    
+                    a {
+                        color: rgba(23, 136, 151, 0.9);
+                    }
+                }
             }
         }
     }

@@ -10,12 +10,12 @@
 </head>
 
 <body class="bg-grey">
-    <header class="hero-image">
+    <header class="master-header">
         <div class="row align-middle">
             <div class="columns small-12 medium-4">
                 <div class="header-mast__logo-holder">
                     <a href="/index.php">
-                        <img class="header-mast__logo-holder__logo" src="library/images/logo.png" alt="logo" />
+                        <img class="header-mast__logo-holder__logo" src="<?php get_header_image("../library/logo.png") ?>" alt="logo" />
                     </a>
                 </div>
             </div>
@@ -44,4 +44,6 @@
                     </nav>
                 </div>
             </div>
-        </div>
+        </div> 
+    </header>
+   

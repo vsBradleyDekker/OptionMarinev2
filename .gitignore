@@ -4,7 +4,8 @@ wp-*.php
 wp-admin/
 wp-includes/
 wp-content/
-!wp-content/optionmarine/*
+!wp-content/themes/optionmarine
+!wp-content/themes/optionmarine/template-parts
 
 node_modules/
 

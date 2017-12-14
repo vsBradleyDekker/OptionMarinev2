@@ -9023,93 +9023,111 @@ ul {
         padding-top: 0;
         padding-bottom: 0; } }
 
-.banner-wrapper {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  height: 80%; }
+#content {
+  background-image: url(../css/img/yacht3.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 320px; }
   @media print, screen and (min-width: 40em) {
-    .banner-wrapper {
-      width: 86%;
-      height: 68%; } }
+    #content {
+      height: 640px; } }
   @media print, screen and (min-width: 64em) {
-    .banner-wrapper {
-      margin-top: 10em;
-      height: 55%;
-      width: 35%;
-      padding-top: 14em;
-      padding-right: 14em;
-      padding-bottom: 14em;
-      padding-left: 14em; } }
-  @media screen and (min-width: 64em) {
-    .banner-wrapper {
-      width: 80%; } }
-  @media screen and (min-width: 75em) {
-    .banner-wrapper {
-      width: 55%; } }
-  .banner-wrapper .banner__background {
-    position: absolute;
-    background: rgba(23, 136, 151, 0.9);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 100;
-    opacity: 0.8; }
-  .banner-wrapper .banner__content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 99999; }
+    #content {
+      height: 1024px; } }
+  @media print, screen and (min-width: 40em) {
+    #content .content-wrap {
+      height: 640px;
+      overflow: hidden; } }
+  @media print, screen and (min-width: 64em) {
+    #content .content-wrap {
+      height: 1024px; } }
+  #content .content-wrap .banner-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 80%; }
     @media print, screen and (min-width: 40em) {
-      .banner-wrapper .banner__content {
-        margin: 30px;
-        border: 3px solid white; } }
-    .banner-wrapper .banner__content .banner__content-title {
-      padding-top: 1em;
-      margin-bottom: 1em; }
+      #content .content-wrap .banner-wrapper {
+        width: 86%;
+        height: 68%; } }
+    @media print, screen and (min-width: 64em) {
+      #content .content-wrap .banner-wrapper {
+        height: 55%;
+        width: 35%;
+        margin-top: 10em;
+        padding-top: 14em;
+        padding-right: 14em;
+        padding-bottom: 14em;
+        padding-left: 14em; } }
+    @media screen and (min-width: 64em) {
+      #content .content-wrap .banner-wrapper {
+        width: 80%; } }
+    @media screen and (min-width: 75em) {
+      #content .content-wrap .banner-wrapper {
+        width: 55%; } }
+    #content .content-wrap .banner-wrapper .banner__background {
+      position: absolute;
+      background: rgba(23, 136, 151, 0.9);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 100;
+      opacity: 0.8; }
+    #content .content-wrap .banner-wrapper .banner__content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 99999; }
       @media print, screen and (min-width: 40em) {
-        .banner-wrapper .banner__content .banner__content-title {
-          margin-bottom: 0.5em;
-          padding-top: 0.5em;
-          font-size: 56px; } }
-      @media print, screen and (min-width: 64em) {
-        .banner-wrapper .banner__content .banner__content-title {
-          padding-top: 1em;
-          margin-bottom: 1em; } }
-    .banner-wrapper .banner__content .banner__content-subtitle {
-      color: #ffffff;
-      margin-bottom: 2em; }
-      @media print, screen and (min-width: 40em) {
-        .banner-wrapper .banner__content .banner__content-subtitle {
-          margin-bottom: 1em;
-          font-size: 28px; } }
-    .banner-wrapper .banner__content .banner__content-button {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      background: #ffffff;
-      padding-top: 16px;
-      padding-right: 0px;
-      padding-bottom: 16px;
-      padding-left: 0px;
-      padding-top: 16px;
-      padding-bottom: 16px; }
-      @media print, screen and (min-width: 40em) {
-        .banner-wrapper .banner__content .banner__content-button {
-          display: inline-block;
-          width: 50%;
-          font-size: 20px; } }
-      @media print, screen and (min-width: 40em) {
-        .banner-wrapper .banner__content .banner__content-button {
-          display: inline-block;
-          width: 50%; } }
-      .banner-wrapper .banner__content .banner__content-button a {
-        color: rgba(23, 136, 151, 0.9); }
+        #content .content-wrap .banner-wrapper .banner__content {
+          margin: 30px;
+          border: 3px solid white; } }
+      #content .content-wrap .banner-wrapper .banner__content .banner__content-title {
+        padding-top: 1em;
+        margin-bottom: 1em; }
+        @media print, screen and (min-width: 40em) {
+          #content .content-wrap .banner-wrapper .banner__content .banner__content-title {
+            margin-bottom: 0.5em;
+            padding-top: 0.5em;
+            font-size: 56px; } }
+        @media print, screen and (min-width: 64em) {
+          #content .content-wrap .banner-wrapper .banner__content .banner__content-title {
+            padding-top: 1em;
+            margin-bottom: 1em; } }
+      #content .content-wrap .banner-wrapper .banner__content .banner__content-subtitle {
+        color: #ffffff;
+        margin-bottom: 2em; }
+        @media print, screen and (min-width: 40em) {
+          #content .content-wrap .banner-wrapper .banner__content .banner__content-subtitle {
+            margin-bottom: 1em;
+            font-size: 28px; } }
+      #content .content-wrap .banner-wrapper .banner__content .banner__content-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background: #ffffff;
+        padding-top: 16px;
+        padding-right: 0px;
+        padding-bottom: 16px;
+        padding-left: 0px;
+        padding-top: 16px;
+        padding-bottom: 16px; }
+        @media print, screen and (min-width: 40em) {
+          #content .content-wrap .banner-wrapper .banner__content .banner__content-button {
+            display: inline-block;
+            width: 50%;
+            font-size: 20px; } }
+        @media print, screen and (min-width: 40em) {
+          #content .content-wrap .banner-wrapper .banner__content .banner__content-button {
+            display: inline-block;
+            width: 50%; } }
+        #content .content-wrap .banner-wrapper .banner__content .banner__content-button a {
+          color: rgba(23, 136, 151, 0.9); }
 
 /*======= Map Styling ============*/
 #map {
@@ -9127,7 +9145,6 @@ ul {
     display: block; }
 
 .hero-image {
-  background-image: url(../css/img/yacht3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 320px; }
@@ -9239,12 +9256,12 @@ ul {
         left: 5px; } }
 
 /*--Header Navigation Menu--*/
-.header-mast__navigation {
+.master-header .header-mast__navigation {
   z-index: 1; }
-  .header-mast__navigation nav {
+  .master-header .header-mast__navigation nav {
     width: 100%;
     background: transparent; }
-    .header-mast__navigation nav .toggle {
+    .master-header .header-mast__navigation nav .toggle {
       padding-top: 5px;
       padding-right: 17px;
       padding-bottom: 5px;
@@ -9253,7 +9270,7 @@ ul {
       float: right;
       position: relative;
       right: 20px;
-      bottom: 55px;
+      bottom: 20px;
       box-sizing: border-box;
       text-align: right;
       background: #178897;
@@ -9263,11 +9280,11 @@ ul {
       transition: all 3s ease-out;
       cursor: pointer; }
       @media print, screen and (min-width: 40em) {
-        .header-mast__navigation nav .toggle {
+        .master-header .header-mast__navigation nav .toggle {
           display: none; } }
-    .header-mast__navigation nav .active {
+    .master-header .header-mast__navigation nav .active {
       display: block; }
-    .header-mast__navigation nav ul {
+    .master-header .header-mast__navigation nav ul {
       padding-top: 0px;
       padding-right: 0px;
       padding-bottom: 0px;
@@ -9278,11 +9295,11 @@ ul {
       margin-top: 15px;
       background: #178897; }
       @media print, screen and (min-width: 40em) {
-        .header-mast__navigation nav ul {
+        .master-header .header-mast__navigation nav ul {
           width: 80%;
           display: block;
           background: transparent; } }
-      .header-mast__navigation nav ul li {
+      .master-header .header-mast__navigation nav ul li {
         padding-top: 1em;
         padding-right: 2em;
         padding-bottom: 1em;
@@ -9293,23 +9310,23 @@ ul {
         text-align: left;
         padding-left: 2em; }
         @media print, screen and (min-width: 40em) {
-          .header-mast__navigation nav ul li {
+          .master-header .header-mast__navigation nav ul li {
             display: inline-block;
             border-bottom: none;
             padding-top: 0;
             padding-bottom: 0;
             padding-left: 0; } }
-        .header-mast__navigation nav ul li:hover {
+        .master-header .header-mast__navigation nav ul li:hover {
           opacity: 0.8; }
-        .header-mast__navigation nav ul li a {
+        .master-header .header-mast__navigation nav ul li a {
           text-decoration: none;
           color: #ffffff;
           font-size: 18px;
           font-weight: 600; }
           @media print, screen and (min-width: 40em) {
-            .header-mast__navigation nav ul li a {
+            .master-header .header-mast__navigation nav ul li a {
               color: #555555; } }
-          .header-mast__navigation nav ul li a .fa {
+          .master-header .header-mast__navigation nav ul li a .fa {
             padding: 0.5em;
             padding-top: 0.5em;
             padding-right: 0.5em;
