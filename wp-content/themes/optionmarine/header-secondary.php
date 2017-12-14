@@ -5,19 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Option Marine</title>
-    <!--<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css">-->
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css?ver=<?php echo rand();?>">
-    <?php wp_head();?>
+
    
 </head>
 
 <body class="gray-background">
-    <header class="white-background header-secondary">
+    <header class="white-background master-header">
         <div class="row align-middle">
             <div class="columns small-12 medium-4">
                 <div class="header-mast__logo-holder">
                     <a href="/index.php">
-                        <img class="header-secondary__logo header-mast__logo-holder__logo" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png" alt="logo" />
+                        <img class="header-mast__logo-holder__logo" src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png" alt="logo" />
                     </a>
                 </div>
             </div>
@@ -29,17 +29,12 @@
                         </div>
                        
 
-			<?php
+<?php
 wp_nav_menu( array( 
     'theme_location' => 'main-nav', 
-    'container_class' => 'custom-menu-class',
+    'container' => false,
     'menu_class'=>'nav top-nav cf' ) ); 
 ?>
-                        <script>
-				
-				jQuery('#menu-item-67 a').addClass('button-head');
-
-                        </script>  
 			<?/*
                         <ul id="menu-the-main-menu" class="nav top-nav cf">
                             <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-5">

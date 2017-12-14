@@ -57,7 +57,7 @@
            
             .input-group-field{
                 @include padding-all( 1em, 0em, 1em ,1em);
-                border: 3px solid #FFF;
+                border: 3px solid $white;
                 background: transparent;
                 color: $white;
 
@@ -66,7 +66,7 @@
                 }
 
                 @include placeholder{
-                    color: $white;
+                    color: $secondary-color;
                 }
 
                 @include breakpoint(medium){
@@ -99,16 +99,21 @@
             }
         }
     }
+
     .footer__navigation {
 
         ul {
 
             span {
                 font-size: 18px;
+                color: $white;
+                font-weight: 600;
+                display: block;
+                
             }
             
             li {
-
+                padding-top: .5em;
                 a {
                     font-size: 14px;
                     
@@ -120,6 +125,7 @@
             }
         }
     }
+
     .footer__copyright {
         color: $white;
         font-size: 13px;
