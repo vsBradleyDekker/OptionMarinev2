@@ -1,40 +1,78 @@
+
 .master-header {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background: $white;
-        
+
+    @include breakpoint(small only){
+        background: $white;
+        left: 0;
+        transform: none;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+    
+    left: 50%;
+    transform: translate( -50%, 0 );
+    width: 100%;
+    max-width: 1046px;
+    position: absolute;
+       
+    @include placeholder{
+        transform: translate( -50%, 0 );
+    }
+
+   
     .header-mast__logo-holder {
 
         img{
-            width: 55%;
-            padding-bottom: 1em;
+            max-width: 281px;
+            width: 100%;
+            height: auto;
+            padding-bottom: 5px;
+          
+
+            @include breakpoint(small only){
+                max-width: 281px;
+                width: 60%;
+                height: auto;
+                padding-bottom: 5px;
+            }
         }
     }
-
+  
     .header-mast__navigation {
-        z-index: 1;
+        height: 0px;
+
 
         nav {
-            width: 100%;
-                    
+            position: relative;
+            padding-top: 1.5em;
+            float: right;
+
+            @include breakpoint(small only){
+                padding-top: 0;
+                float: none;
+            }
+            
             .toggle {
-                @include padding-all( 5px, 17px, 5px ,17px); 
+                @include padding-all(5px, 17px, 5px ,17px); 
                 display: block;
                 float: right;
-                position: relative;
-                right: 20px;
-                bottom: 75px;
+                position: absolute;
+                right: 10px;
+                bottom: 15px;
                 box-sizing: border-box;
                 text-align: right;
-                background: rgba(23, 136, 151, 1);
+                background: $white;
                 font-size: 30px;
-                color: $white;
+                color: rgba(23, 136, 151, 1);
                 border-radius: 10px;
                 transition: all 3s ease-out;
                 cursor: pointer;
 
                 @include breakpoint(medium) {
                     display: none;
+                    bottom: 75px;
+                    right: 25px;
                 }
             }
 
@@ -44,14 +82,13 @@
 
             ul {
                 @include padding-all( 0px, 0px, 0px ,0px); 
-                
                 display: none;
                 float: right;
-                margin-top: 15px;
                 background: rgba(23, 136, 151, 1);
+                width: 100%;
 
                 @include breakpoint(medium) {
-                
+                    margin-top: 15px;
                     display: block;
                     background: transparent;
                 }
@@ -59,76 +96,65 @@
                 li {
                     display: block;           
                     list-style-type: none;
-                    
-                
-                    @include breakpoint(small){
-                        padding-left: 2em;
-                    }
-                
-                    @include breakpoint(medium) {
-                        display: inline-block;
-                        border-bottom: none;
-                        padding-top: 0;
-                        padding-bottom: 0;
-                        padding-left: 0;
-                    }
-
-                    &:hover {
-                        opacity: 0.8;
-                    }
-
-                    a {
-                        text-decoration: none;
-                        color: $white;
-                        font-size: 18px;
-                        font-weight: 600;
-
-                        @include breakpoint(medium) {
-                            color: $primary-font-color;
+                   
+        
+                        @include breakpoint(small){
+                          padding-left: 2em;
                         }
-                        
-                        .fa{
-                            padding: 0.5em;
-                            @include padding-all( 0.5em, 0.5em, 0.5em ,0.5em); 
+                
+                        @include breakpoint(medium) {
+                            display: inline-block;
+                            padding: 10px 10px;
+                        }
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $white;
+                            font-size: 18px;
+                            font-weight: 600;
+
+                            @include breakpoint(medium) {
+                                color: $primary-font-color;
+                            }
+                            
+                            .fa{
+                                padding: 0.5em;
+                                @include padding-all( 0.5em, 0.5em, 0.5em ,0.5em); 
+                            }
+                        }
+
+                    &:last-child{
+                        display: inline;
+                        background: transparent;
+
+                        @include breakpoint(small only){
+                            display: block;
                         }
                     }
                 }  
             }
-            ul{
-
-                li{
-            
-                    &:last-child{
-                        padding-right: 0;
-                        padding: 10px 15px;
-                        border-bottom: 3px solid #555555;
-                        display: inline;
-                    }
-
-                    a{
-
-                    }
-                }
-            }
-                
+        
             .menu-item-has-children {
+
                 position: relative;
-                padding-right: 0;
-            
+               
+          
                 .sub-menu {
+                  
                     display: none;
                     width: auto;
                     position: absolute;
                     margin: 0;
                     background-color: $main-color;
+                  
 
                     li{
-                        @include padding-all( 5px, 0px, 5px ,5px); 
-
-                            &:last-child{
-                                padding-right: 0;
-                                border-bottom: 3px solid #555555;
-                            }
+                        @include padding-all( 5px, 5px, 5px ,5px); 
+                        width: 100%;
 
                         a {
                             white-space: nowrap;
@@ -141,30 +167,49 @@
         
                     > .sub-menu{
                         display: block;
-                    }
-                }
-        
-            }
 
-            > .menu-item-has-children{
-                
-                > .sub-menu{
-                    
-                    top: 100%;
-        
-                    >.menu-item-has-children {
-                        
-                        &:hover {
-                            .sub-menu {
-                                left: 100%;
-                                top: 0;
+                        li{
+                          
+                            padding: 10px 10px;
+                            border-bottom: 1px solid #FFF;
+                            
+                            &:last-child{
+                                padding-right: 0;
+                                border-bottom: 0 !important;
+                                width: 100%;
                             }
                         }
-                        
                     }
-        
                 }
-            }    
+            }
+
+            .nav{
+
+                > .menu-item-has-children{
+            
+                    > .sub-menu{
+
+                        > .menu-item-has-children{
+
+                            &:hover{
+                                opacity: 1;
+
+                                .sub-menu{
+                                    top: 0;
+                                    left: 100%;
+                                    background:rgba(23, 136, 151, 1);
+                                    
+                                    li{
+                                        width: 100%;
+                                        padding: 10px 10px;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

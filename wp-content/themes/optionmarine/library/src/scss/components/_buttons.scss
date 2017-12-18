@@ -32,15 +32,22 @@
 }
 
 .button-head{
-
+    
     @include padding-all( 10px, 20px, 10px ,20px); 
-    width: 100%;
-    margin-top: 1em;
-    border: 3px solid #555555;
-    background: $white;
-    font-size: 15px;
-    color: #555555;
-    cursor: pointer;
+        width: 100%;
+        margin-top: 1em;
+        border: 3px solid #555555;
+        background: $white;
+        font-size: 15px;
+        color: #555555;
+        cursor: pointer;
+        white-space: nowrap;
+
+    @include breakpoint(small only){
+        border: none;
+        padding: 0;
+        margin-top: 0;
+    }
     
     @include breakpoint(medium) {
         width: 20%;

@@ -12,17 +12,16 @@
 
 <body class="bg-grey">
     <header class="master-header">
-        <div class="row align-middle">
-            <div class="columns small-12 medium-4">
-                <div class="header-mast__logo-holder">
-                    <a href="/index.php">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png"alt="logo" />
-                    </a>
+            <div class="row">
+                <div class="columns small-12 medium-4">
+                    <div class="header-mast__logo-holder">
+                        <a href="/index.php">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo.png"alt="logo" />
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="header-mast__navigation columns small-12 medium-8">
-                <div class="row">
-                    <nav>
+                <div class="header-mast__navigation columns small-12 medium-8">
+                    <nav class="nav">
                         <div class="toggle menu">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </div>
@@ -35,7 +34,7 @@
                         ?>
                     </nav>
                 </div>
-            </div>
+            
         </div> 
     </header>
    

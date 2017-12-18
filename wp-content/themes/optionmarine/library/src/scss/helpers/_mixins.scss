@@ -21,7 +21,7 @@
   @include optional-at-root(':-moz-placeholder') {
     @content;
   }
-  @include optional-at-root('::-moz-placeholder') {
+  @include optional-at-root('::-o-placeholder') {
     @content;
   }
   @include optional-at-root(':-ms-input-placeholder') {

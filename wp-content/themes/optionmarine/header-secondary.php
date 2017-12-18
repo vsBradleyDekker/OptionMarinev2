@@ -7,12 +7,9 @@
     <title>Option Marine</title>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css?ver=<?php echo rand();?>">
-
-   
 </head>
-
 <body class="gray-background">
-    <header class="white-background master-header">
+    <header class="white-background master-header pos-static">
         <div class="row align-middle">
             <div class="columns small-12 medium-4">
                 <div class="header-mast__logo-holder">
@@ -23,19 +20,19 @@
             </div>
             <div class="header-mast__navigation columns small-12 medium-8">
                 <div class="row">
-                    <nav class="text-right">
+                    <nav class="nav">
                         <div class="toggle menu">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </div>
                        
 
-<?php
-wp_nav_menu( array( 
-    'theme_location' => 'main-nav', 
-    'container' => false,
-    'menu_class'=>'nav top-nav cf' ) ); 
-?>
-			<?/*
+                    <?php
+                    wp_nav_menu( array( 
+                        'theme_location' => 'main-nav', 
+                        'container' => false,
+                        'menu_class'=>'nav top-nav cf' ) ); 
+                    ?>
+                                <?/*
                         <ul id="menu-the-main-menu" class="nav top-nav cf">
                             <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-5">
                                 <a href="../pages/products.php">Products</a>
@@ -79,3 +76,4 @@ wp_nav_menu( array(
                 </div>
             </div>
         </div>
+    </header>

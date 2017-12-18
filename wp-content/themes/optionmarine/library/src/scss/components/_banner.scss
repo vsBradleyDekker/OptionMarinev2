@@ -1,10 +1,16 @@
 #content{
+   @include breakpoint(small only){
     background-image:url('../img/yacht3.jpg')!important;
     background-size: cover;
     background-repeat: no-repeat;
     height: 320px;
-   
+    z-index: 0;
+    position: relative;
+   }
     
+   background-image:url('../img/yacht3.jpg')!important;
+   background-size: cover;
+   background-repeat: no-repeat;
         @include breakpoint(medium) {
             height: 640px;
         }
@@ -29,16 +35,23 @@
             @include center-block;
             position: relative;
             height: 80%;
+
+            @include breakpoint(small only){
+                position: static;
+            }
+            
             
             @include breakpoint(medium) {
+                
                 width: 86%;
-                height: 68%;
+               
+                margin-top: 7em;
             }
 
             @include breakpoint(large) {
                 height: 55%;
                 width: 35%;
-                margin-top: 10em;
+                margin-top: 20em;
                 @include padding-all( 14em, 14em, 14em ,14em);
             }
 
