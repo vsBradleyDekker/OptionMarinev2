@@ -10,7 +10,7 @@
 </head>
 <body class="gray-background">
     <header class="white-background master-header pos-static">
-        <div class="row align-middle">
+        <div class="row">
             <div class="columns small-12 medium-4">
                 <div class="header-mast__logo-holder">
                     <a href="/index.php">
