@@ -28,9 +28,14 @@
                 background: $main-color;
 
                 .border {
-                    margin: 1em;
+                    
+                    margin: 1.5em;
                     border: 2px solid $border-secondary;
                     padding-top: 0;
+
+                    @include breakpoint(medium){
+                        margin: 1em;
+                    }
                 }
 
                 span {

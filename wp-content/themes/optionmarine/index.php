@@ -14,7 +14,7 @@
             </div>
             <div class="columns small-12 medium-12">
                 <div class="row text-center">
-                    <button class="banner__content-button"><a href="#">Learn More</a></button>
+                    <button class="banner__content-button">Learn More</button>
                 </div>
             </div>
         </div>

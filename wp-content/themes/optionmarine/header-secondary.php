@@ -19,8 +19,8 @@
                 </div>
             </div>
             <div class="header-mast__navigation columns small-12 medium-8">
-                <div class="row">
-                    <nav class="nav">
+                <div class="row float-right">
+                    <nav class="nav ">
                         <div class="toggle menu">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </div>

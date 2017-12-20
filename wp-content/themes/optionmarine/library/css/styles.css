@@ -8483,9 +8483,12 @@ ul {
       opacity: 0.9;
       background: #027d8b; }
       .products-section .products-section__listing .wrapper .hover .border {
-        margin: 1em;
+        margin: 1.5em;
         border: 2px solid #fff;
         padding-top: 0; }
+        @media print, screen and (min-width: 40em) {
+          .products-section .products-section__listing .wrapper .hover .border {
+            margin: 1em; } }
       .products-section .products-section__listing .wrapper .hover span {
         font-weight: bold;
         font-size: 18px;
@@ -8653,19 +8656,12 @@ ul {
     cursor: pointer; }
 
 .master-header {
-  left: 50%;
-  transform: translate(-50%, 0);
+  background: #ffffff;
+  left: 0;
+  transform: none;
   width: 100%;
-  max-width: 1046px;
-  position: absolute; }
-  @media screen and (max-width: 39.9375em) {
-    .master-header {
-      background: #ffffff;
-      left: 0;
-      transform: none;
-      width: 100%;
-      position: relative;
-      z-index: 10; } }
+  position: relative;
+  z-index: 10; }
   .master-header::-webkit-input-placeholder {
     transform: translate(-50%, 0); }
   .master-header:-moz-placeholder {
@@ -8674,6 +8670,13 @@ ul {
     transform: translate(-50%, 0); }
   .master-header:-ms-input-placeholder {
     transform: translate(-50%, 0); }
+  @media print, screen and (min-width: 40em) {
+    .master-header {
+      left: 50%;
+      transform: translate(-50%, 0);
+      max-width: 1046px;
+      position: absolute;
+      background: transparent; } }
   .master-header .header-mast__logo-holder img {
     max-width: 281px;
     width: 100%;
@@ -8681,36 +8684,33 @@ ul {
     padding-bottom: 5px; }
     @media screen and (max-width: 39.9375em) {
       .master-header .header-mast__logo-holder img {
-        max-width: 281px;
-        width: 60%;
-        height: auto;
-        padding-bottom: 5px; } }
+        width: 60%; } }
   .master-header .header-mast__navigation {
     height: 0px; }
     .master-header .header-mast__navigation nav {
-      position: relative;
-      padding-top: 1.5em;
-      float: right; }
-      @media screen and (max-width: 39.9375em) {
+      padding-top: 0;
+      float: none; }
+      @media print, screen and (min-width: 40em) {
         .master-header .header-mast__navigation nav {
-          padding-top: 0;
-          float: none; } }
+          position: relative;
+          padding-top: 1.5em;
+          float: right; } }
       .master-header .header-mast__navigation nav .toggle {
         padding-top: 5px;
         padding-right: 17px;
         padding-bottom: 5px;
         padding-left: 17px;
-        display: block;
+        box-sizing: border-box;
         float: right;
+        display: block;
         position: absolute;
         right: 10px;
-        bottom: 10px;
-        box-sizing: border-box;
-        text-align: right;
+        bottom: 15px;
         background: #ffffff;
+        text-align: right;
         font-size: 30px;
-        color: #178897;
         border-radius: 10px;
+        color: #178897;
         transition: all 3s ease-out;
         cursor: pointer; }
         @media print, screen and (min-width: 40em) {
@@ -8719,7 +8719,7 @@ ul {
             bottom: 75px;
             right: 25px; } }
         .master-header .header-mast__navigation nav .toggle .fa {
-          font-size: 55px; }
+          font-size: 50px; }
       .master-header .header-mast__navigation nav .active {
         display: block; }
       .master-header .header-mast__navigation nav ul {
@@ -8729,8 +8729,8 @@ ul {
         padding-left: 0px;
         display: none;
         float: right;
-        background: #178897;
-        width: 100%; }
+        width: 100%;
+        background: #178897; }
         @media print, screen and (min-width: 40em) {
           .master-header .header-mast__navigation nav ul {
             margin-top: 15px;
@@ -8738,19 +8738,24 @@ ul {
             background: transparent; } }
         .master-header .header-mast__navigation nav ul li {
           display: block;
-          list-style-type: none;
-          padding: 1em 2em;
-          border-top: 1px solid #ffffff; }
+          padding: 15px 0px; }
+          @media screen and (max-width: 39.9375em) {
+            .master-header .header-mast__navigation nav ul li {
+              border-bottom: 1px solid black;
+              border-left: 3px solid #178897; } }
           @media print, screen and (min-width: 40em) {
             .master-header .header-mast__navigation nav ul li {
               display: inline-block;
-              padding: 10px 10px;
-              border-top: none; }
+              padding: 10px 15px; }
               .master-header .header-mast__navigation nav ul li:last-child {
                 border-top: 3px solid #555555; } }
           .master-header .header-mast__navigation nav ul li:hover {
-            opacity: 0.8; }
+            opacity: 1; }
+            @media print, screen and (min-width: 40em) {
+              .master-header .header-mast__navigation nav ul li:hover {
+                opacity: 0.8; } }
           .master-header .header-mast__navigation nav ul li a {
+            padding: 10px 15px;
             text-decoration: none;
             color: #ffffff;
             font-size: 18px;
@@ -8773,43 +8778,67 @@ ul {
       .master-header .header-mast__navigation nav .menu-item-has-children {
         position: relative; }
         .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu {
-          display: none;
-          width: auto;
-          position: absolute;
-          margin: 0;
-          background-color: #027d8b; }
+          background-color: #ffffff;
+          border-left: 3px solid #ffffff;
+          margin-top: 1em;
+          margin-bottom: 1em; }
+          @media print, screen and (min-width: 40em) {
+            .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu {
+              display: none;
+              position: absolute;
+              background-color: #027d8b;
+              border-left: none;
+              width: auto;
+              margin: 0;
+              border-left: 0;
+              margin-top: 0;
+              margin-bottom: 0; } }
+          .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu:hover {
+            border-left: 3px solid #027d8b; }
+            @media print, screen and (min-width: 40em) {
+              .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu:hover {
+                border-left: none; } }
           .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu li {
-            padding-top: 5px;
-            padding-right: 5px;
-            padding-bottom: 5px;
-            padding-left: 5px;
-            width: 100%; }
+            display: block;
+            border-bottom: 1px solid #027d8b;
+            border-left: none; }
+            @media print, screen and (min-width: 40em) {
+              .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu li {
+                display: inline-block;
+                color: #555555;
+                border-bottom: none; } }
             .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu li a {
               white-space: nowrap;
-              color: #ffffff; }
+              color: #027d8b; }
+              @media print, screen and (min-width: 40em) {
+                .master-header .header-mast__navigation nav .menu-item-has-children .sub-menu li a {
+                  color: #ffffff; } }
         .master-header .header-mast__navigation nav .menu-item-has-children:hover > .sub-menu {
-          display: none; }
+          display: block; }
           @media print, screen and (min-width: 40em) {
-            .master-header .header-mast__navigation nav .menu-item-has-children:hover > .sub-menu {
-              display: block; }
-              .master-header .header-mast__navigation nav .menu-item-has-children:hover > .sub-menu li {
-                padding: 10px 10px;
-                border-bottom: 1px solid #FFF; }
-                .master-header .header-mast__navigation nav .menu-item-has-children:hover > .sub-menu li:last-child {
-                  padding-right: 0;
-                  border-bottom: 1px solid #ffffff;
-                  border-top: none;
-                  width: 100%; } }
-      .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover {
-        opacity: 1; }
+            .master-header .header-mast__navigation nav .menu-item-has-children:hover > .sub-menu li:last-child {
+              width: 100%;
+              padding-right: 0;
+              border-bottom: 1px solid #ffffff;
+              border-top: none; } }
+      @media print, screen and (min-width: 40em) {
         .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover .sub-menu {
           top: 0;
           left: 100%;
-          background: #178897; }
+          background: #ffffff; } }
+  @media print, screen and (min-width: 40em) and (min-width: 40em) {
+    .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover .sub-menu {
+      background: #178897; } }
+      @media print, screen and (min-width: 40em) {
           .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover .sub-menu li {
+            display: block;
             width: 100%;
-            padding: 10px 10px;
-            display: block; }
+            padding: 10px; }
+            .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover .sub-menu li a {
+              color: #027d8b; } }
+      @media print, screen and (min-width: 40em) and (min-width: 40em) {
+        .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover .sub-menu li a {
+          color: #ffffff; } }
 
 /*Turns off header styling for hompage*/
 .pos-static {
@@ -9165,7 +9194,8 @@ ul {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    height: 80%; }
+    height: 80%;
+    z-index: 1; }
     @media screen and (max-width: 39.9375em) {
       #content .content-wrap .banner-wrapper {
         position: static; } }

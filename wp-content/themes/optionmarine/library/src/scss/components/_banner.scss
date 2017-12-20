@@ -35,7 +35,7 @@
             @include center-block;
             position: relative;
             height: 80%;
-
+            z-index: 1;
             @include breakpoint(small only){
                 position: static;
             }
