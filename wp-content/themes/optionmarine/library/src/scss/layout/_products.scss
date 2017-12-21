@@ -14,6 +14,7 @@
         
         .wrapper {
             position: relative;
+            z-index: 1;
 
             .hover {
                 height: 100%;
@@ -28,7 +29,6 @@
                 background: $main-color;
 
                 .border {
-                    
                     margin: 1.5em;
                     border: 2px solid $border-secondary;
                     padding-top: 0;

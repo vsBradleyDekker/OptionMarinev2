@@ -120,4 +120,11 @@
         @include prefix(transition, background 2s ease-out, webkit moz o ms);
     }
 }
-   
+.fade
+{
+        opacity:0.5;
+}
+.fade:hover
+{
+        opacity:1;
+}
