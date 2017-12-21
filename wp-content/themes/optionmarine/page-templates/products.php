@@ -9,7 +9,7 @@ Template Name: Products
 <section class="products-section">
     <div class="row">
         <div class="products-section__heading columns small-12 medium-12 text-center pt-medium pb-medium">
-            <h2 class="products-section__heading-title">Products</h2>
+            <h1 class="products-section__heading-title">Products</h1>
         </div>
     </div>
     <div class="row">

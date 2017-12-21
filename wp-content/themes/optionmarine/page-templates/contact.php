@@ -21,7 +21,7 @@ if (have_posts()) : while (have_posts()) : the_post();
     <div class="row align-justify">
         <div class=" white-background columns small-12 medium-6">
             <div class="row contact-info__title pad-ltr-small">
-                <h2> <?php the_title()?></h2>
+                <h1> <?php the_title()?></h1>
             </div>
             <div class="row contact-info__subtitle pad-ltr-small">
                 <?php the_content()?>
@@ -112,7 +112,7 @@ endif;
         </div>
         <div class="columns contact-form pb-small small-12 medium-5 white-background">
             <div class="row pad-ltr-small">
-                <h4 class="contact-form__title"><?=$o['contact_form_instructions']['value']?></h4>
+                <span class="contact-form__title"><?=$o['contact_form_instructions']['value']?></span>
             </div>
             <div class="row contact-form__form">
                 <div class="columns small-12 medium-12" id="formContainer" style="position: relative">

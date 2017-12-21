@@ -20,16 +20,19 @@ if (have_posts()) : while (have_posts()) : the_post();
     <div class="row pb-small">
         <div class="columns small-12 medium-4  pt-small pb-medium">
             <div class="columns small-12 white-background">
-                <h2 class="product-information__title pt-small"><?=$t[0]->name?></h2>
+                <h1 class="product-information__title pt-small"><?=$t[0]->name?></h1>
                 <p class="product-infomation__description"><?=nl2br(htmlentities($t[0]->description))?></p>
                 <a class="button" href="<?=get_permalink(46);?>?product=<?=addslashes(urlencode($p->post_title))?>">Enquire</a>        
             </div>
         </div>
         <div class="columns small-12 medium-8 product-information__type pt-small pb-medium">
             <div class="columns small-12 white-background">
-                <h3 class="product-information__type__title pt-small"><? the_title();?></h3>
+                <span class="product-information__type__title pt-small"><? the_title();?></span>
                 <? the_content();?>
             </div>
+<?php
+if (  is_array( $o['downloads']['value']  )   ):
+?>
             <div class="columns small-12 pt-medium pb-medium mb-small product-information__downloads white-background">
                 <div class="row collapse">
                     <div class="columns small-12 product-information__downloads-title pb-medium bt-border-light">
@@ -37,8 +40,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                     </div>
                 </div>
 <?php
-foreach( $o['downloads']['value'] AS $_download ):
-
+    foreach( $o['downloads']['value'] AS $_download ):
 ?>
                 <div class="row collapse">
                     <div class="columns pt-small pb-small small-12 medium-10 bt-border-light">
@@ -51,12 +53,17 @@ foreach( $o['downloads']['value'] AS $_download ):
                     </div>
                 </div>
 <?php
-endforeach;
-?>
-                
+    endforeach;
+?>           
             </div>
-
+<?
+endif;
+?>
+<?php
+if (  is_array( $o['gallery']['value']  )   ):
+?>
             <div class="columns small-12 product-information__gallery mb-small pt-small pb-medium white-background">
+            
                 <h3 class="product-information__gallery__title">Gallery</h3>
                 <div class="row">
 <?php
@@ -73,7 +80,13 @@ endforeach;
                  
                 </div>
             </div>
-            <div class="columns small-12 white-background pt-medium pb-medium product-information__technical-spec">
+<?
+endif;
+?>
+<?php
+if (  is_array( $o['technical_specifications']['value'] )   ):
+?>
+            <div class="columns small-12 pt-medium pb-medium product-information__technical-spec">
                 <div class="row">
                     <div class="columns small-12 medium-12">
                         <div class="row collapse">
@@ -82,9 +95,6 @@ endforeach;
                             </div>
                         </div>
 <?php
-
-
-
 foreach( $o['technical_specifications']['value'] AS $_spec ):
 ?>
                         <div class="row collapse">
@@ -96,13 +106,14 @@ foreach( $o['technical_specifications']['value'] AS $_spec ):
                             </div>
                         </div>
 <?php
-
 endforeach;
-?>
-                       
+?>                      
                     </div>
                 </div>
             </div>
+<?php
+endif;
+?>
         </div>
     </div>
 </section>

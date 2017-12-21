@@ -8254,7 +8254,7 @@ a.thumbnail {
   clip: auto; }
 
 h1 {
-  color: #ffffff;
+  color: #1779ba;
   font-weight: 600; }
 
 h2 {
@@ -8296,7 +8296,7 @@ body {
   font-family: 'Ubuntu', sans-serif; }
 
 h1 {
-  color: #ffffff;
+  color: #1779ba;
   font-weight: 600; }
 
 h2 {
@@ -8837,15 +8837,13 @@ ul {
               padding-right: 0;
               border-top: none;
               border-bottom: none; } }
-      .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover:after {
-        content: "\25B6";
-        color: #178897;
-        padding: 1em;
-        font-size: 12px;
-        font-weight: 600; }
-        @media print, screen and (min-width: 40em) {
-          .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover:after {
-            color: #ffffff; } }
+      @media print, screen and (min-width: 40em) {
+        .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover:after {
+          content: "\25B6";
+          color: #178897;
+          padding: 1em;
+          font-size: 12px;
+          font-weight: 600; } }
       @media print, screen and (min-width: 40em) {
         .master-header .header-mast__navigation nav .nav > .menu-item-has-children > .sub-menu > .menu-item-has-children:hover .sub-menu {
           top: 0;
