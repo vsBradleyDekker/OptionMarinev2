@@ -9,12 +9,17 @@
         }
 
         .product-information__trail {
-            color: #828282;
+            color: $primary-font-color;
+            
+            a{
+                color: $primary-font-color;
+            }
         }
     }
 
     .product-information__title {
         margin-bottom: 1em;
+        color: $main-color;
         
     }
 
