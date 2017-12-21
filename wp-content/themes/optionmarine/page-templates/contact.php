@@ -105,6 +105,7 @@ endif;
 
 ?>
                 </ul>
+                
             </div>
             <div class="row contact-info__map pt-small">
                 <div id="map"></div>

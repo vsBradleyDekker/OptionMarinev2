@@ -8255,15 +8255,17 @@ a.thumbnail {
 
 h1 {
   color: #1779ba;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 31px; }
 
 h2 {
   color: #555555;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 22px; }
 
 h3 {
   color: #027d8b;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 1em;
   font-weight: 600; }
 
@@ -8297,15 +8299,17 @@ body {
 
 h1 {
   color: #1779ba;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 31px; }
 
 h2 {
   color: #555555;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 22px; }
 
 h3 {
   color: #027d8b;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 1em;
   font-weight: 600; }
 
@@ -8887,8 +8891,7 @@ ul {
     .product-information .row .product-information__trail {
       color: #828282; }
   .product-information .product-information__title {
-    margin-bottom: 1em;
-    font-size: 22px; }
+    margin-bottom: 1em; }
   .product-information .product-infomation__description {
     text-align: left; }
   .product-information .product-information__type__title-description {
