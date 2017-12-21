@@ -18,18 +18,34 @@
         
     }
 
+   
     .product-infomation__description{
         text-align: left;
     }
+
+    .product-information__type__title{
+        font-size: 22px;
+        font-weight: 600;
+        color: $primary-font-color;
+        padding-top: 0;
+        display: block;
+        margin-bottom: 1em;
+    }
+
 
     .product-information__type__title-description{
         text-align: left;
     }
 
+   
+
     .product-information__downloads {
         
         .product-information__downloads-title{
             border-bottom: none;
+            font-size: 22px;
+            font-weight: 600;
+            color: $primary-font-color;
 
             @include breakpoint(medium){
                 border-bottom: 1px solid #d9d9d9;
@@ -49,19 +65,32 @@
             }
         }
     }
-
-    .product-information__gallery__listing{
-        img{
-            max-width: 100%;
-            width: 100%;
+    .product-information__gallery{
+        
+        .product-information__gallery__title{
+            color: $primary-font-color;
+            font-size: 22px;
+            display: block;
+            font-weight: 600;
+        }
+        
+        .product-information__gallery__listing{
+            
+            img{
+                max-width: 100%;
+                width: 100%;
+            }
         }
     }
+   
 
     .product-information__technical-spec {
         background: $main-color;
 
         .product-information__technical-spec__title {
             color: $white;
+            font-size: 22px;
+            font-weight: 600;
         }
 
         .product-information__technical-spec__part{

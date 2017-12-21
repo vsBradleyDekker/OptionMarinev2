@@ -14,24 +14,24 @@ $_uses = get_option( "category-extra-field-uses-" . $t->term_id );
         </div>
     </div>
     <div class="row pt-medium pb-medium">
-        <div class="columns small-12 medium-6">
-            <div class="white-background pad-all-xs">
-                <h4 class="product-category__title"><?=$t->name?></h4>
+        <div class="columns small-12 medium-6 no-pad">
+            <div class="white-background pad-all-md">
+                <h1 class="product-category__title"><?=$t->name?></h1>
                 <p class="product-category__description"><?=htmlentities( $t->description )?></p>
             </div>
         </div>
-        <div class="columns small-12 medium-6">
-            <div class="white-background pad-all-xs">
-                <h3 class="product-category__uses">Application/Uses</h3>
+        <div class="columns small-12 medium-6  no-pad-rt">
+            <div class="white-background pad-all-md">
+                <span class="product-category__uses">Application/Uses</span>
 		<p class="product-category__description"><?=htmlentities( $_uses )?></p>
             </div>
         </div>
     </div>
     <div class="row align-middle pb-medium">
-        <div class="columns pb-medium small-12 medium-12 product-category__list">
+        <div class="columns pad-all-md small-12 medium-12 product-category__list">
             <div class="row">
-                <div class="columns pt-medium small-12 medium-12">
-                    <h3 class="product-category__list-title">Product Name</h3>
+                <div class="columns small-12 medium-12">
+                    <span class="product-category__list-title">Product Name</span>
                 </div>
             </div>
 <?php

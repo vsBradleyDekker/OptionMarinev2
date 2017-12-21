@@ -258,14 +258,14 @@
                             &:hover{
 
                                 &:after {
-                                    
-                                   
-                                  
-                                
-
+                                    content: "\25B6";
+                                    color:rgba(23, 136, 151, 1);
+                                    padding: 1em;
+                                    font-size: 12px;
+                                    font-weight: 600;
                                     @include breakpoint(medium){
                                         content: "\25B6";
-                                        color:rgba(23, 136, 151, 1);
+                                        color: $white;
                                         padding: 1em;
                                         font-size: 12px;
                                         font-weight: 600;

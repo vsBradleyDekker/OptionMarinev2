@@ -77,11 +77,17 @@
 .no-pad {
   padding: 0 !important;
 }
+.no-pad-rt{
+  padding-right: 0 !important;
+}
 
 
 
 .pad-all-xs{
   padding: 0.5em;
+}
+.pad-all-md{
+  padding: 2em !important;
 }
 
 .pad-top-bot {
@@ -113,6 +119,10 @@
   margin-bottom: 1em;
 }
 
+.mt-small{
+  margin-top: 1em;
+}
+
 .mb-medium {
   margin-top: 1.875em;
 }
@@ -120,10 +130,9 @@
 .mb-large {
   margin-bottom: 3.75em;
 }
+
 /*buttons*/
 
-
-/*note: made for a element*/
 .cta-button{
   @include padding-all( 0.5em, 0.5em, 0.5em ,0em); 
   background: transparent;
@@ -133,9 +142,9 @@
   font-weight: 600;
   
   &:hover{
-  
     color: #555555;
     opacity: 0.8;
+    
   }
 }
 

@@ -26,14 +26,14 @@ if (have_posts()) : while (have_posts()) : the_post();
             </div>
         </div>
         <div class="columns small-12 medium-8 product-information__type pt-small pb-medium">
-            <div class="columns small-12 white-background">
-                <h2 class="product-information__type__title pt-small"><? the_title();?></h2>
+            <div class="columns small-12 white-background ">
+                <span class="product-information__type__title pt-small"><? the_title();?></span>
                 <? the_content();?>
             </div>
 <?php
 if (  is_array( $o['downloads']['value']  )   ):
 ?>
-            <div class="columns small-12 pt-medium pb-medium mb-small product-information__downloads white-background">
+            <div class="columns small-12 pt-medium pb-medium mb-small mt-small product-information__downloads white-background">
                 <div class="row collapse">
                     <div class="columns small-12 product-information__downloads-title pb-medium bt-border-light">
                         <span class="no-margin">Downloads</span>
@@ -64,7 +64,7 @@ if (  is_array( $o['gallery']['value']  )   ):
 ?>
             <div class="columns small-12 product-information__gallery mb-small pt-small pb-medium white-background">
             
-                <span class="product-information__gallery__title">Gallery</span>
+                <span class="product-information__gallery__title pb-medium">Gallery</span>
                 <div class="row">
 <?php
 foreach( $o['gallery']['value'] AS $_image ):

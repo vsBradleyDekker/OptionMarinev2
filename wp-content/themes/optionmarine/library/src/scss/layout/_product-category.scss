@@ -15,7 +15,7 @@
    
 
     .product-category__title {
-        padding-top: 1em;
+       
         margin-bottom: 1em;
         text-align: center;
         font-weight: 600;
@@ -33,9 +33,14 @@
     }
 
     .product-category__uses {
-        padding-top: 1em;
+       
         margin-bottom: 1em;
         text-align: center;
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+        color: $primary-font-color;
+
 
         @include breakpoint(medium){
            text-align: left;
@@ -49,10 +54,12 @@
             text-align: center;
             font-size: 22px;
             color: $white;
+            font-weight: bold;
 
             @include breakpoint(medium){
                 border-left: 0;
                 text-align: left;
+
             }
         }
 
@@ -62,8 +69,7 @@
             border-right: 1px solid $white;
             border-left: 1px solid $white;
             @include padding-all( 0.5em, 0em, 0.5em, 0em); 
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
+           
             text-align: center;
             font-size: 18px;
             color: $white;
