@@ -22,15 +22,7 @@ if (have_posts()) : while (have_posts()) : the_post();
             <div class="columns small-12 white-background">
                 <h2 class="product-information__title pt-small"><?=$t[0]->name?></h2>
                 <p class="product-infomation__description"><?=nl2br(htmlentities($t[0]->description))?></p>
-                <button class="button">Enquire</button>
-                <script>
-			
-			window.jQuery('button.button').click( function(){
-
-				window.location = '<?=addslashes(get_permalink(46))?>?product=<?=addslashes(urlencode($p->post_title))?>';
-			});
-		
-                </script> 
+                <a class="button" href="<?=get_permalink(46);?>?product=<?=addslashes(urlencode($p->post_title))?>">Enquire</a>        
             </div>
         </div>
         <div class="columns small-12 medium-8 product-information__type pt-small pb-medium">
