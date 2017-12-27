@@ -8542,7 +8542,7 @@ ul {
 
 .contact-info {
   background: #eee; }
-  .contact-info .contact-info__title h1 {
+  .contact-info .contact-info__title h2 {
     color: #027d8b;
     font-weight: 600;
     font-size: 38px; }
@@ -8599,6 +8599,39 @@ ul {
         font-size: 30px; }
       .contact-info .contact-info__social-list ul li .fa {
         color: #0899b8; }
+
+#formContainer .gform_wrapper .top_label input.medium, #formContainer .gform_wrapper .gform_wrapper .top_label select.medium {
+  width: 100%; }
+
+#formContainer .gform_wrapper .top_label .gfield_label {
+  display: none; }
+
+#formContainer .gform_wrapper .field_description_below .gfield_description {
+  display: none; }
+
+#formContainer .gform_wrapper input.large, #formContainer .gform_wrapper input.medium {
+  padding-top: 0em;
+  padding-right: 2em;
+  padding-bottom: 0em;
+  padding-left: 1em;
+  border-color: #7d7d7d; }
+
+#formContainer .gform_wrapper .gform_footer input[type="submit"] {
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  background: #207c89;
+  color: #FFF;
+  cursor: pointer;
+  border-style: none; }
+
+#formContainer .gform_wrapper .gform_footer {
+  margin-top: 0px; }
 
 .contact-form #myForm {
   height: 3em; }

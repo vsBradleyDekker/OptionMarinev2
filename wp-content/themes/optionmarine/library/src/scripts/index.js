@@ -5,3 +5,4 @@ global.jQuery = $;
 
 require('foundation-sites');
 require('./scripts.js');
+require('./contact.js');

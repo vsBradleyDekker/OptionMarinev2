@@ -1,4 +1,47 @@
 <?php
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+    }
+
+
+function __fix__( $tag, $handle, $src )
+{
+	
+
+	if( $handle == 'gmaps' )
+	{
+		$_script = str_replace( '&#038;', '&', $tag ); 
+
+		return str_replace( '<script', '<script async defer', $_script );
+	}
+
+	return $tag;
+	
+}
+
+function __enqueue_gmap__()
+{
+
+	$_o = get_queried_object();
+
+	$_t = get_post_meta( $_o->ID, '_wp_page_template', true );
+
+	$acf = get_field_objects();
+
+	if( $_t == 'page-templates/contact.php' )
+	{
+		wp_enqueue_script( 'gmaps', 'https://maps.googleapis.com/maps/api/js?key=' . $acf['google_map_api_key']['value'] . '&callback=initMap', array( 'bones-js'), NULL, $in_footer=true );
+
+		add_filter( 'script_loader_tag', '__fix__', 10, 3 );
+	}	
+
+}
+
+add_action( 'wp', '__enqueue_gmap__' );
+
+
 /*
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
@@ -369,7 +412,7 @@ function quickSort(&$input)
 
 }
 
-
+/*
 if( $_POST['action'] == '__CONTACT__' )
 {
 
@@ -426,6 +469,6 @@ if( $_POST['action'] == '__CONTACT__' )
 	exit;
 	
 }
-
+*/
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

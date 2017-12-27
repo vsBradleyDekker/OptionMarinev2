@@ -3,7 +3,7 @@
     
     .contact-info__title {
         
-       h1 {
+        h2 {
             color: $main-color;
             font-weight: 600;
             font-size: 38px;
@@ -91,6 +91,43 @@
             }
         }
     }
+}
+
+#formContainer {
+
+	.gform_wrapper{ 
+		
+		.top_label input.medium, .gform_wrapper .top_label select.medium { width: 100% }
+		.top_label .gfield_label { display: none }
+		.field_description_below .gfield_description { display: none }
+
+		input.large, input.medium { padding-top: 0em;
+			padding-right: 2em;
+			padding-bottom: 0em;
+			padding-left: 1em;
+			border-color: #7d7d7d; }
+
+		.gform_footer input[type="submit"]{
+
+
+			padding-top: 1em;
+			padding-right: 1em;
+			padding-bottom: 1em;
+			padding-left: 1em;
+			display: block;
+			width: 100%;
+			font-size: 20px;
+			font-weight: 600;
+			background: #207c89;
+			color: #FFF;
+			cursor: pointer;
+			border-style: none;
+		}
+
+		.gform_footer { margin-top: 0px }
+	}
+
+	
 }
 
 .contact-form {

@@ -9,6 +9,7 @@
     <title>Option Marine</title>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/styles.css?ver=<?php echo rand();?>">
+    <?php wp_head(); ?>
 </head>
 <body class="gray-background">
     <header class="white-background master-header pos-static">
