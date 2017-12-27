@@ -8262,7 +8262,7 @@ a.thumbnail {
   clip: auto; }
 
 h1 {
-  color: #1779ba;
+  color: #027d8b;
   font-weight: 600;
   font-size: 32px; }
 
@@ -8306,7 +8306,7 @@ body {
   font-family: 'Ubuntu', sans-serif; }
 
 h1 {
-  color: #1779ba;
+  color: #027d8b;
   font-weight: 600;
   font-size: 32px; }
 
@@ -8542,7 +8542,7 @@ ul {
 
 .contact-info {
   background: #eee; }
-  .contact-info .contact-info__title h2 {
+  .contact-info .contact-info__title h1 {
     color: #027d8b;
     font-weight: 600;
     font-size: 38px; }
