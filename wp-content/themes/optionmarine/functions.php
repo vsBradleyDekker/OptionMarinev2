@@ -330,6 +330,7 @@ function category_edit_form_fields( $tag ) {    //check for existing featured ID
 
 add_action('edit_term','category_save_extra_fields');
 add_action('create_term','category_save_extra_fields');
+add_action('delete_term','category_delete_extra_fields');
 
 function category_save_extra_fields($term_id){
 
@@ -340,6 +341,15 @@ function category_save_extra_fields($term_id){
 
 	if (isset($_POST['cat-order'])) 
 		update_term_meta( $term_id, 'cat-order', $_POST['cat-order']);
+
+}
+
+function category_delete_extra_fields($term_id){
+
+	
+        delete_option('category-extra-field-uses-' . $term_id );
+
+
 
 }
 
