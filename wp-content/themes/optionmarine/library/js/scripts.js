@@ -14573,7 +14573,6 @@ jQuery('.gform_wrapper form').each(function () {
 	});
 });
 
-
 window.initMap = function () {
 
 	var uluru = {
